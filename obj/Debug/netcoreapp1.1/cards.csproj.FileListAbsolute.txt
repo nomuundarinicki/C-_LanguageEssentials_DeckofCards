@@ -1,0 +1,8 @@
+/Users/nickchimedbavuu/Desktop/C#/cards/bin/Debug/netcoreapp1.1/cards.deps.json
+/Users/nickchimedbavuu/Desktop/C#/cards/bin/Debug/netcoreapp1.1/cards.runtimeconfig.json
+/Users/nickchimedbavuu/Desktop/C#/cards/bin/Debug/netcoreapp1.1/cards.runtimeconfig.dev.json
+/Users/nickchimedbavuu/Desktop/C#/cards/bin/Debug/netcoreapp1.1/cards.dll
+/Users/nickchimedbavuu/Desktop/C#/cards/bin/Debug/netcoreapp1.1/cards.pdb
+/Users/nickchimedbavuu/Desktop/C#/cards/obj/Debug/netcoreapp1.1/cards.AssemblyInfo.cs
+/Users/nickchimedbavuu/Desktop/C#/cards/obj/Debug/netcoreapp1.1/cards.dll
+/Users/nickchimedbavuu/Desktop/C#/cards/obj/Debug/netcoreapp1.1/cards.pdb
