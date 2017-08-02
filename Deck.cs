@@ -1,50 +1,51 @@
+using System;
 using System.Collections.Generic;
 
-namespace cards
-{
-    public class Deck{
-        public List<Card> cards;
-        
-        public Deck()
-        {
-            reset();
-            shuffle();
+namespace DeckOfCards {
+    public class Deck {
+        private List<Card> cards;
 
+        public Deck() {
+            Reset();
         }
-        public Deck reset()
-        {   
-            cards =  new List<Card>();
-            string [] suits = {"heats", "diamonds", "spades", "clubs"};
-            string [] strVals = {"Ace","two","three","four","five","six","seven","eight","nine","ten","jack","queen", "king",};
 
-            foreach(string Suit in suits)
-            {
-                // build out set of individual cards 
-                for ( int  i = 0; i <strVals.Length; i++ )
-                {
-                    Card noob = new Card(strVals[i], Suit, i+1);
-                    cards.Add(noob);
-                }
-            
+        public Card Deal() {
+            if(cards.Count > 0) {
+                Card temp = cards[0];
+                cards.RemoveAt(0);
+                return temp;
+            }
+            return null;
+        }
+
+        public Deck Shuffle() {
+            Random rand = new Random();
+            for(int idx = cards.Count - 1; idx > 0; idx--) {
+                int randIdx = rand.Next(idx);
+                Card temp = cards[randIdx];
+                cards[randIdx] = cards[idx];
+                cards[idx] = temp;
             }
             return this;
-        }   
-        public Card deal()
-        {
-            if (cards.Count > 0)
-            {
-                //grab top card
-            Card res = cards[0];
-            //remove card
-            cards.RemoveAt(0);
-            //return card 
-            return res;
-            }
-            else{
-                reset();
-                return deal();
-            }
         }
 
+        public Deck Reset() {
+            cards = new List<Card>();
+            string[] suits = new string[4] {"Hearts","Clubs","Spades","Diamonds"};
+            foreach(string suit in suits) {
+                for(int val = 1; val <= 13; val++) {
+                    cards.Add(new Card(suit, val));
+                }
+            }
+            return this;
+        }
+
+        public override string ToString() {
+            string info = "";
+            foreach(Card card in cards) {
+                info += card + "\n";
+            }
+            return info;
+        }
     }
 }

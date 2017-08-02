@@ -1,14 +1,15 @@
-﻿using System;
+﻿
+using System;
 
-namespace cards
+namespace DeckOfCards
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-           Deck myDeck = new Deck();
-           Player tester = new Player();
-           Console.WriteLine(myDeck);
+            Deck myDeck = new Deck();
+            Player tester = new Player("tom");
+            Console.WriteLine(myDeck);
         }
     }
 }
